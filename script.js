@@ -6,43 +6,33 @@ function getComputerChoice() {
     return options[Math.floor(Math.random()*options.length)];
 }
 
-//console.log(getComputerChoice());
-
 // Create a function that takes two parameters: playerSelection and computerSelection,compares the two, and declares a winner
-
 function playRound(playerSelection, computerSelection) {
     //Convert playerSelection to same format as options (lowercase except first letter)
     playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase();
-
-    if (playerSelection === computerSelection) {
-        return 2;
-    }
-    else if (playerSelection === "Rock" && computerSelection === "Scissors") {
-        return 1;
+    
+    if (playerSelection === "Rock" && computerSelection === "Scissors") {
+        return ["You won! Rock beats Scissors", 1];
     }
     else if (playerSelection === "Paper" && computerSelection === "Rock") {
-        return 1;
+        return ["You won! Paper beats Rock", 1];
     }
     else if (playerSelection === "Scissors" && computerSelection === "Paper") {
-        return 1;
+        return ["You won! Scissors beats Paper", 1];
     }
     else if (playerSelection === "Rock" && computerSelection === "Paper") {
-        return 0;
+        return ["You lose! Paper beats Rock", 0]
     }
     else if (playerSelection === "Paper" && computerSelection === "Scissors") {
-        return 0;
+        return ["You lose! Scissors beats Paper", 0];
+    }
+    else if (playerSelection === "Scissors" && computerSelection === "Rock") {
+        return ["You lose! Rock beats Scissors", 0];
     }
     else {
-        return 0;
+        return ["It's a tie! No points given", null];
     }
 }
-
-
-let playerSelection = "rock";
-let computerSelection = getComputerChoice();
-
-//console.log(playRound(playerSelection, computerSelection));
-
 
 // Function that plays 5 rounds of Rock Paper Scissors and keeps score
 
@@ -86,4 +76,33 @@ function game() {
     }
 }
 
-game()
+// game()
+
+// Game UI
+const rockBtn = document.createElement('button');
+rockBtn.innerHTML = 'Rock';
+
+const paperBtn = document.createElement('button');
+paperBtn.innerHTML = 'Paper';
+
+const scissorsBtn = document.createElement('button');
+scissorsBtn.innerHTML = 'Scissors';
+
+rockBtn.addEventListener('click', () => {
+    let playerSelection = 'Rock';
+    let computerSelection = getComputerChoice();
+    let result = playRound(playerSelection, computerSelection)
+})
+
+paperBtn.addEventListener('click', () => {
+    let playerSelection = 'Paper';
+    let computerSelection = getComputerChoice();
+    let result = playRound(playerSelection, computerSelection)
+})
+
+scissorsBtn.addEventListener('click', () => {
+    let playerSelection = 'Scissors';
+    let computerSelection = getComputerChoice();
+    let result = playRound(playerSelection, computerSelection)
+})
+
