@@ -1,5 +1,15 @@
 # Rock, Paper, Scissors
 
-A simple game of Rock, Paper, Scissors played against the computer in the console
+![Image](UI.png)
 
-TODO: Add user interface on webpage
+## About
+
+A simple game of Rock, Paper, Scissors played against the computer. Part of The ODIN Project
+
+[Check it out](https://pbrebner.github.io/rock-paper-scissors-game/)
+
+## Topics Covered
+
+-   Basic Javascript
+-   Simple DOM Manipulation
+-   Event Listeners
