@@ -5,3 +5,120 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+    min-height: 100vh;
+    font-family: "Roboto", sans-serif;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    height: 160px;
+    background-color: rgb(46, 65, 84);
+    color: white;
+    font-size: 1.8rem;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    background-color: aliceblue;
+    text-align: center;
+
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.statementContainer {
+    font-size: 1.5rem;
+    padding: 30px;
+    height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.resetBtn {
+    width: fit-content;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.resetBtn:hover {
+    filter: brightness(120%);
+}
+
+.roundResults {
+    display: flex;
+    gap: 40px;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.choice {
+    background-color: rgb(46, 65, 84);
+    font-size: 2rem;
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice img {
+    height: 80px;
+}
+
+.score {
+    font-size: 1.2rem;
+    padding: 20px;
+}
+
+.gameOptions {
+    display: flex;
+    gap: 30px;
+}
+
+.gameOptions button {
+    font-size: 1.4rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.gameOptions button:hover {
+    filter: brightness(120%);
+}
+
+.footer {
+    height: 80px;
+    background-color: rgb(46, 65, 84);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
