@@ -6,7 +6,7 @@
 
 A simple game of Rock, Paper, Scissors played against the computer. Part of The ODIN Project
 
-[Check it out](https://pbrebner.github.io/rock-paper-scissors-game/)
+[Try it out](https://pbrebner.github.io/rock-paper-scissors-game/)
 
 ## Topics Covered
 
